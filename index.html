@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="lib/p5.min.js"></script>
+    <script src="lib/p5.dom.js"></script>
+
+    <script src="sketch.js"></script>
+
+    <!-- add extra scripts below -->
+    <script src="toolbox.js"></script>
+    <script src="colourPalette.js"></script>
+    <script src="helperFunctions.js"></script>
+
+    <script src="freehandTool.js"></script>
+    <script src="lineToTool.js"></script>
+    <script src="sprayCanTool.js"></script>
+    <script src="mirrorDrawTool.js"></script>
+    <script src="stampTool.js"></script>
+    <script src="shapeDrawTool.js"></script>
+    <script src="dynamicShapeTool.js"></script>
+    <script src="colouringBookTool.js"></script>
+    <script src="paintCanTool.js"></script>
+    <script src="copyPasteTool.js"></script>
+    <script src="toolTips.js"></script>
+    
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+  	<div class="wrapper">
+      <div class="box header">My Drawing App
+
+        <button id="clearButton">Clear</button>
+        <button id="saveImageButton">Save Image</button>
+          
+<!--the drop down menu for the line width selector-->
+        <select id="myDropdown">
+            <option value="1" selected="selected">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+        </select>
+        <label for="#myDropdown">Stroke Width</label>
+        
+<!--       <div id="eraserContainer">   -->
+        <button id = "eraser">Drawing</button>
+          
+<!--    the drop down menu for selecting the eraser size    -->
+        <select id = "eraserSize">
+            <option value="15">Small Eraser</option>  
+            <option value="25" selected = "selected">Medium Eraser</option>  
+            <option value="35">Large Eraser</option>  
+            <option value="65">XLarge Eraser</option>  
+        </select>
+<!--        <label id = "eraserName" for = "#eraserSize">Eraser Size</label>-->
+<!--          </div>-->
+      </div>
+      <div class="box" id="sidebar"></div>
+      <div id="content"></div>
+      <div class="box colourPalette"></div>
+      <div class="box options"></div>
+	</div>
+  </body>
+</html>

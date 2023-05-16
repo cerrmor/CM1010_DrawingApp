@@ -1,0 +1,187 @@
+html, body {
+  margin: 0px;
+  height: 100%;
+}
+
+/*handles how the tool options title looks on the screen*/
+p{
+    margin: 0px 0px 10px 50px;
+    text-align: left;
+    text-decoration: underline;
+}
+
+/*changes how the clear and save button look*/
+#clearButton, #saveImageButton{
+    display: inline-block;
+    padding: 5px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 9px gray;
+}
+
+/*changes the colour of the clear button on hover*/
+#clearButton:hover{
+    background-color: #9e0000;
+}
+
+/*changes how the button looks on press of the button*/
+#clearButton:active{
+    background-color: #9e0000;
+    box-shadow: 0 5px black;
+    transform: translateY(2px);
+}
+
+/*changes the save button style on hover*/
+#saveImageButton:hover{
+    background-color: #3e8e41;
+}
+
+/*changes the save button on click*/
+#saveImageButton:active{
+    background-color: #3e8e41;
+    box-shadow: 0 5px black;
+    transform: translateY(2px);
+}
+
+/*changes the look of the eraser button*/
+#eraser{
+    display: inline-block;
+    padding: 5px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 9px gray;
+}
+
+/*changes the style of the eraser button on hover*/
+#eraser:hover {background-color: #3e8e41;}
+
+/*changes the style of the eraser button on click*/
+#eraser:active{
+    background-color: #3e8e41;
+    box-shadow: 0 5px black;
+    transform: translateY(2px);
+}
+
+/*styles the stamp sliders to be in line with eachother*/
+.slider{
+/*    position: relative;*/
+    display: block;
+    padding: 0px 1px 0px 5px;
+}
+
+/*style the stamp selector to be in line with the sliders*/
+.selector{
+/*    position: relative;*/
+    display: block;
+    padding: 0px 1px 0px 5px;
+}
+
+/*styles the selectors and buttons of the colouring book to be in line*/
+.dropdown{
+    position: relative;
+    display: inline-block;
+    padding: 0px 1px 0px 5px;
+}
+
+/*styles the images that can be selected in the colouring book and how they function*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/*styles what happens when the mouse hoves over the selector images in the colouring book*/
+.dropdown:hover .dropdown-content{
+    display:block;
+    top: -210px;
+}
+
+#sidebar {
+	grid-area: sidebar;
+	overflow-y: scroll;
+}
+
+#content {
+	grid-area: content;
+}
+
+.header {
+	grid-area: header;
+	font-family: Helvetica, sans-serif
+}
+
+.footer{
+  grid-area: footer;
+}
+
+.sideBarItem{
+	max-height: 50px;
+	max-width: 50px;
+	padding:5px;
+}
+
+.sideBarItem img{
+	max-height: 45px;
+	max-Width:45px;
+}
+
+.colourPalette{
+	grid-area: colourP;
+	display:flex;
+	flex-direction:grid;
+	flex-flow: wrap;
+}
+
+.options{
+	grid-area: options;
+	padding: 15px;
+}
+
+.colourSwatches{
+	box-sizing: border-box;
+	width: 40px;
+	height: 40px;
+	max-height: 40px;
+	max-width: 40px;
+	margin: 5px;
+}
+
+
+	.wrapper {
+		display: grid;
+		height: 100%;
+		grid-template-columns: 70px 230px  minmax(500px, 1fr);
+		grid-template-rows: 35px minmax(500px, 1fr) 160px;
+		grid-template-areas:
+               "header header header"
+				"sidebar content content"
+                "colourP colourP options";
+		background-color: #fff;
+		color: #444;
+	}
+.box {
+  background-color: #444;
+  color: #fff;
+  font-size: 150%;
+}
+
+.header {
+  background-color: #999;
+}
